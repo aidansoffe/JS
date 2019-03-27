@@ -1,0 +1,15 @@
+var student ={
+  "name": "Viki",
+  "age": 16,
+  "hobby": "hiking"
+}
+console.log(student.age) // dot notation 
+console.log(student["age"]) // bracket notation
+
+
+student["music"] = "pop music"; // adds another value to an array
+
+console.log(student.music)
+
+delete student["hobby"]; // deletes a value hobby
+console.log(student)

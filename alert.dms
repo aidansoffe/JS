@@ -1,0 +1,10 @@
+if (num > 0){
+alert("The number is positive.")
+ // prints this if bigger then zero
+} else if (num < 0) {
+alert("The number is negative.")
+//prints this if less then 0
+} else {
+ alert("The number is zero.")
+  //prints zero
+} 

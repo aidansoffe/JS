@@ -1,0 +1,15 @@
+// if statements
+//equality, logical and assignment operaters 
+
+var num = 5;
+
+if (num > 0){
+  console.log("The number is positive.")
+ // prints this if bigger then zero
+} else if (num < 0) {
+console.log("The number is negative.")
+//prints this if less then 0
+} else {
+  console.log("The number is zero.")
+  //prints zero
+} 
