@@ -2,7 +2,7 @@ function getFirstElementOfProperty(obj, key) {
   if(!Array.isArray(obj[key])){
     return undefined;
   }
-  var output = 0;
+  
   for (key in obj){
     return obj[key][0]
   }
