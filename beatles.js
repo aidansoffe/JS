@@ -28,14 +28,22 @@ function johnLennonFacts(facts){
 }
 
 
-const n = 9;
 
-function iLoveTheBeatles(n){
-  var k = []
+
+function iLoveTheBeatles(count){
+  const result = [];
+do {
+    count++;
+    result.push("I love the Beatles!")
+  } while (count < 15);
   
-  do {
-  k = "I love the Beatles!"
-  n++
+  return result;
 }
-while (n > 15);
-}
+
+
+
+
+
+
+
+
