@@ -24,3 +24,13 @@ var obj = {
 };
 var output = getElementsThatEqual10AtProperty(obj, 'key');
 console.log(output);
+
+
+///////////////
+
+function getElementsThatEqual10AtProperty(obj, key) {
+    if(!obj[key] || !Array.isArray(obj[key])){
+        return []
+    }
+return obj[key].filter(item => item === 10)
+}
