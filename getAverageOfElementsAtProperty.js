@@ -18,9 +18,10 @@ getAverageOfElementsAtProperty(obj, 'key');
 
 ////////////////
 
-function getOddLengthWordsAtProperty(obj, key) {
-    if(!Array.isArray(obj[key])){
-        return []
+function getAverageOfElementsAtProperty(obj, key) {
+    if(!Array.isArray(obj[key]) || obj[key].length === 0){
+        return 0
     }
-   return obj[key].filter(str => str.length % 2 !== 0 )
+ let fil = obj[key].reduce((a,i)=> a+i);
+ return fil / obj[key].length
 }
