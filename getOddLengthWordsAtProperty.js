@@ -17,3 +17,12 @@ getOddLengthWordsAtProperty(obj, 'key');
 
 => [ 'has', 'words' ]
    
+
+/////////////////
+
+function getOddLengthWordsAtProperty(obj, key) {
+    if(!Array.isArray(obj[key])){
+        return []
+    }
+   return obj[key].filter(str => str.length % 2 !== 0 )
+}
