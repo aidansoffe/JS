@@ -15,3 +15,14 @@ function computeProductOfAllElements(arr) {
     
        
       => 60
+
+/////////////
+
+function computeProductOfAllElements(arr) {
+  // your code here
+  if(arr.length === 0){
+      return 0
+  }
+ return arr.reduce((a,i)=> a*i);
+ 
+}
