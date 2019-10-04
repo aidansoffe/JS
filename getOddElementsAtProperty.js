@@ -13,3 +13,14 @@ var obj = {
 getOddElementsAtProperty(obj, 'key');
 
 => [1, 3, 5]
+
+
+/////////////
+
+function getOddElementsAtProperty(obj, key) {
+  // your code here
+  if(!Array.isArray(obj[key]) || obj[key].length === 0){
+      return []
+  }
+  return obj[key].filter(num => num %2 !==0)
+}
