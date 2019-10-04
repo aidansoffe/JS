@@ -15,3 +15,12 @@ var obj = {
 getSquaredElementsAtProperty(obj, 'key');
 
 => [ 4, 1, 25 ]
+
+///////////////
+
+function getSquaredElementsAtProperty(obj, key) {
+    if(!Array.isArray(obj[key]) || obj[key].length === 0){
+        return []
+    }
+  return obj[key].map(num => num*num)
+}
