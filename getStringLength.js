@@ -8,3 +8,14 @@ function getStringLength(string) {
 getStringLength('hello');
 
 => 5
+
+
+function getStringLength(string) {
+    var count = 0
+  string = string.split('')
+      for(var i of string){
+          count ++
+      }
+  
+  return count
+}
