@@ -1,15 +1,15 @@
 function sumDigits(num) {
-  var res = 0;
-  var sum = num.toString();
-  var numsInArr = sum.split('');
-  for(var i=0; i<numsInArr.length; i++){
-    if(numsInArr[i] === '-'){
+   var res = 0;
+  var sum = num.toString().split('');
+ 
+  for(var i=0; i<sum.length; i++){
+    if(sum[i] === '-'){
       i++;
-      var converted = parseInt(numsInArr[i]);
+      var converted = parseInt(sum[i]);
       res -= converted;
       continue;
     }
-    var convert = parseInt(numsInArr[i]);
+    var convert = parseInt(sum[i]);
       res += convert;
   }
   return res;
