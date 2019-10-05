@@ -6,3 +6,9 @@ function joinArrayOfArrays(arr) {
 joinArrayOfArrays([[1, 4], [true, false], ['x', 'y']]);
 
 => [ 1, 4, true, false, 'x', 'y' ]
+
+///////////////
+
+function joinArrayOfArrays(arr) {
+  return [].concat.apply([], arr)
+}
