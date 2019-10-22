@@ -10,3 +10,12 @@ function filterOddElements(arr) {
 filterOddElements([1, 2, 3, 4, 5]);
 
 => [ 1, 3, 5 ]
+
+/////
+
+short version 2019 October 22
+
+function filterOddElements(numbers){
+     return numbers.filter((item) => item %2 === 1
+    );
+}
