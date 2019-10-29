@@ -5,3 +5,16 @@ function countNumberOfKeys(obj) {
   }
   return count;
 }
+
+
+////////
+
+function countNumberOfKeys(obj) {
+  var count = 0
+  for(var key in obj){
+      if(obj[key]){
+          count++
+      }
+  }
+  return count
+}
