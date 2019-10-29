@@ -15,17 +15,6 @@ function getElementsThatEqual10AtProperty(obj, key) {
   return res;
 }
 
-var obj = {
-  key: [1000, 10, 50, 10, 10],
-  nt: [1],
-  gt: 10,
-  fr: 10,
-  se: 10
-};
-var output = getElementsThatEqual10AtProperty(obj, 'key');
-console.log(output);
-
-
 ///////////////
 
 function getElementsThatEqual10AtProperty(obj, key) {
@@ -33,4 +22,18 @@ function getElementsThatEqual10AtProperty(obj, key) {
         return []
     }
 return obj[key].filter(item => item === 10)
+}
+/////
+
+function getElementsThatEqual10AtProperty(obj, key) {
+    if(!Array.isArray(obj[key]) || (!obj[key].hasOwnProperty)){
+        return []
+    }
+    var newArr = []
+obj[key].forEach((number) => {
+    if(number === 10){
+        newArr.push(number)
+    }
+})
+return newArr
 }
