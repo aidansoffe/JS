@@ -9,3 +9,11 @@ function convertDoubleSpaceToSingle(str) {
 
 var output = convertDoubleSpaceToSingle("string  with  double  spaces");
 console.log(output);
+
+
+/////////
+
+function convertDoubleSpaceToSingle(str) {
+  
+  return str.replace(/ {1,}/g," ")
+}
