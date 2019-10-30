@@ -23,3 +23,16 @@ function getLongestWordOfMixedElements(arr) {
 getLongestWordOfMixedElements([3, 'word', 5, 'up', 3, 1]);
 
 => 'word'
+
+
+///////////////////
+
+function getLongestWordOfMixedElements(arr) {
+  let str = arr.filter((word) => typeof word === 'string')
+  
+  if(str.length===0){
+      return ''
+  }
+  return str.reduce((a, b) => a.length >= b.length ? a:b)
+  
+}
