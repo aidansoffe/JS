@@ -25,3 +25,16 @@ function getAverageOfElementsAtProperty(obj, key) {
  let fil = obj[key].reduce((a,i)=> a+i);
  return fil / obj[key].length
 }
+
+///
+function getAverageOfElementsAtProperty(obj, key) {
+  
+  if(!Array.isArray(obj[key]) || obj[key].length === 0){
+      return 0
+  }
+  let sum = 0
+  for(var value in obj[key]){
+      sum+=obj[key][value]
+  }
+  return sum/obj[key].length
+}
