@@ -11,3 +11,7 @@ function filterOddLengthWords(words) {
  
  
  => [ 'there', 'now' ]
+
+///////
+
+ return words.filter((word) => word.length %2 !== 0)
