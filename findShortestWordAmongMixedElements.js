@@ -26,14 +26,7 @@ findShortestWordAmongMixedElements([4, 'two', 2, 'a', 'three']);
 ///////
 
 function findShortestWordAmongMixedElements(arr) {
-
-  let short = []
-  for (var i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === 'string') {
-      short.push(arr[i])
-
-    }
-  }
+  let short = arr.filter((word) => typeof word === 'string')
   
   if(short.length===0){
       return '';
