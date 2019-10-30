@@ -15,3 +15,15 @@ removeElement([1, 2, 3, 2, 1], 2);
 
 
 => [ 1, 3, 1 ]
+
+
+///////
+
+let arr = []
+  for(var i=0; i<array.length; i++){
+      if(array[i] === discarder){
+          continue;
+      }
+      arr.push(array[i])
+  }
+  return arr
