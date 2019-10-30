@@ -15,3 +15,22 @@ function findSmallestNumberAmongMixedElements(arr) {
 }
 
 findSmallestNumberAmongMixedElements([10, 6 , 8, 'hi', true, 2]);
+
+////////
+
+function findSmallestNumberAmongMixedElements(arr) {
+ let small = []
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      small.push(arr[i])
+
+    }
+    
+  }
+  
+  if(small.length===0){
+      return 0;
+  }
+
+ return small.reduce((a, b) => a <= b ? a: b)
+}
