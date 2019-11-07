@@ -10,4 +10,20 @@ for(var i=0; i<newStr.length; i++){
 return true;
 }
   
-  isIsogram("moses");  
+ 
+
+
+function isIsogram(text) {
+    text = text.toLowerCase().split('')
+     var letter = new Set(text)
+     return text.length === letter.size
+  
+}
+
+////////////////
+function isIsogram(str) {
+    str = str.toLowerCase()
+    return str.split('').every((a, b) => str.indexOf(a) == b)
+}
+
+  isIsogram("moses"); 
