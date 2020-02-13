@@ -27,3 +27,19 @@ function nowServing(katzDeliLine) {
         return  "The line is currently:" + numbered
   }
      
+
+
+
+// using forEach 
+  
+// function currentLine(katzDeliLine) {
+//   var numbered = []
+// if(katzDeliLine.length === 0) {
+//   return 'The line is empty'
+// }
+// katzDeliLine.forEach(function(name, idx){
+
+// numbered.push(` ${idx+1}. ${name}` )
+// });
+//   return `The line is currently: ${numbered}`
+// }
