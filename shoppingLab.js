@@ -47,7 +47,15 @@ function viewCart(c) {
 }
   
 
-
+function total() {
+  var totalPrice = 0 
+  
+  cart.map(function(item) {
+    var num = item.itemPrice
+    totalPrice += num
+  })
+    return totalPrice
+}
 
 function removeFromCart(item) {
   // write your code here
