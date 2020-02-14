@@ -4,52 +4,50 @@ function getCart() {
  return cart;
 }
 
+
+
 function setCart(c) {
   cart = c;
   return cart;
 }
 
-function addToCart(item) {
 
+
+
+function addToCart(item) {
  var obj = {}
  obj.itemName = item
  obj.itemPrice = Math.floor(Math.random() * 100) + 1
- 
  cart.push(obj)
  return `${item} has been added to your cart.`
 }
 
 
-function viewCart(c) {
-  let l = c.length
-  if (!l) {
-    return 'Your shopping cart is empty.';
+
+function viewCart() {
+  var array = [];
+
+  for ( let i = 0; i < cart.length; i++) {
+      array.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
+  }
+  if (cart.length === 0) {
+    return `Your shopping cart is empty.`;}
+
+  if (cart.length === 1){
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
   }
 
-  var newString = 'In your cart, you have ';
-
-  var mapping = c.map(function (item, index) {
-    let stuff = `${item.itemName} at $${item.itemPrice}, `
-    let lastItem = `and ${item.itemName} at $${item.itemPrice}.`
-    let oneItem = `${item.itemName} at $${item.itemPrice}.`
-    if( c.length === 1) {
-    
-        newString = newString.concat(oneItem)
-        return newString
-      }
-     else if(index === c.length-1) {
-           newString = newString.concat(lastItem)
-      } else {
-            newString = newString.concat(stuff)
-      }
-   });
-  return newString;
+  if (cart.length ===2){
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`
+  }else{
+    let lastItem = array.pop();
+    return `In your cart, you have ${array.join(', ')}, and ${lastItem}.`
+  }
 }
   
 
 function total() {
   var totalPrice = 0 
-  
   cart.map(function(item) {
     var num = item.itemPrice
     totalPrice += num
@@ -57,10 +55,41 @@ function total() {
     return totalPrice
 }
 
+
+ 
+
 function removeFromCart(item) {
-  // write your code here
+    const filtered = []
+    
+  cart.forEach(fruit => filtered.push(fruit.itemName));
+  
+ if (filtered.includes(item)) {
+    cart = cart.filter(fruit => fruit.itemName !== item);
+    return cart;
+  }
+  return "That item is not in your cart."
+  
 }
+  
+
+
 
 function placeOrder(cardNumber) {
-  // write your code here
+var cartTotal
+if (cardNumber){
+  cartTotal= total()
+  cart = []
+  return `Your total cost is $${cartTotal}, which will be charged to the card ${cardNumber}.`
 }
+else{
+return "Sorry, we don't have a credit card on file for you."
+}
+}
+
+
+
+
+
+
+
+
