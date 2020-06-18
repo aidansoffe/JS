@@ -195,3 +195,18 @@ function removeVowels(str) {
 }
 
 removeVowels('Bumble') 
+
+
+
+function doubleOddNumbers(array) {
+  let oddArray = [] 
+  array.filter(function(num) {
+    if(num % 2 !== 0) {
+       oddArray.push(num * 2)
+    }
+  })
+  return oddArray
+}
+
+// doubleOddNumbers([1,2,3,4,5]) // [2,6,10]
+doubleOddNumbers([4,4,4,4,4]) 
