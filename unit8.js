@@ -125,3 +125,29 @@ extractFullName([
   {first: 'Matt', last:"Lane"},
   {first: 'Colt', last:"Steele"}
 ])
+
+
+
+function filterByValue(obj) {
+  let newArray = []
+  for(var i =0; i < obj.length; i++){
+if(obj[i]['isCatOwner']) {
+  newArray.push(obj[i])
+}
+}
+return newArray
+}
+
+filterByValue(
+[
+  {first: 'Elie', last:"Schoppik"},
+  {first: 'Tim', last:"Garcia", isCatOwner: true},
+  {first: 'Matt', last:"Lane"},
+  {first: 'Colt', last:"Steele", isCatOwner: true}
+],
+'isCatOwner'
+)
+
+
+
+
