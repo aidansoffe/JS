@@ -183,3 +183,15 @@ findInObj(
   'isCatOwner',
   true
 )
+
+
+function removeVowels(str) {
+  let string;
+ let newStr = str.toLowerCase().split()
+    string = newStr.map(x=>x.replace( /[aeiou]/g, '' ));              
+
+  return string.toString()
+
+}
+
+removeVowels('Bumble') 
