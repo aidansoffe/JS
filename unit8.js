@@ -31,3 +31,63 @@ return firstAndLastChar
 }
 showFirstAndLast(['colt','matt', 'tim', 'test'])
 showFirstAndLast(['hi', 'goodbye', 'smile'])
+
+
+function addKeyAndValue(arr, key, value){
+  return arr.reduce(function(acc, curValue, index){
+    acc[index][key] = value;
+    return acc;
+  },arr);
+}
+
+addKeyAndValue(
+[
+  {name: 'Elie'},
+  {name: 'Tim'},
+  {name: 'Matt'},
+  {name: 'Colt'}
+],
+  'title',
+  'instructor'
+)
+
+
+
+
+
+function vowelCount(str) {
+  let arr = str.toLowerCase()
+  var vowels = 'aeiou'
+
+  let obj = {};
+
+  for (let i of arr) {
+    if(vowels.includes(i)) {
+    obj[i] = obj[i] + 1 || 1;
+    }
+  }
+  return obj;
+}
+
+
+vowelCount('I Am awesome and so are you')
+
+function doubleValuesWithMap(num) {
+  return num.map(n => n+n)
+}
+doubleValuesWithMap([1,-2,-3])
+
+
+
+function valTimesIndex(arr) {
+ let newArr = arr.map(function(val, index){ 
+            return val * index 
+        }) 
+return newArr
+}
+
+valTimesIndex([1,2,3])
+
+
+
+
