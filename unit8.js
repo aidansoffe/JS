@@ -90,4 +90,19 @@ valTimesIndex([1,2,3])
 
 
 
-
+function extractKey(myArray) {
+let newArray = []
+for (var i=0; i < myArray.length; i++) {
+  newArray.push(myArray[i].name)
+        }
+        return newArray
+}
+extractKey(
+  [
+    {name: 'Elie'},
+    {name: 'Tim'},
+    {name: 'Matt'},
+    {name: 'Colt'}
+  ],
+  'name'
+)
