@@ -106,3 +106,22 @@ extractKey(
   ],
   'name'
 )
+
+
+
+
+
+function extractFullName(obj) {
+ let fullName = []
+ for( var i = 0; i < obj.length; i++){
+   fullName.push(obj[i].first + ' ' + obj[i].last)
+ }
+ return fullName
+}
+
+extractFullName([
+  {first: 'Elie', last:"Schoppik"},
+  {first: 'Tim', last:"Garcia"},
+  {first: 'Matt', last:"Lane"},
+  {first: 'Colt', last:"Steele"}
+])
