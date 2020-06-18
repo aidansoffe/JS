@@ -161,3 +161,25 @@ find([1,2,3,4,2, 5], 2) // 3
 // find([1,2,3,4,5], 10)
 
 
+
+function findInObj(obj) {
+  for(var i =0; i < obj.length; i++){
+if(obj[i]['isCatOwner'] === true) {
+  newArray = obj[i]
+  break;
+}
+}
+return newArray
+}
+
+
+findInObj(
+  [
+    {first: 'Elie', last:"Schoppik"},
+    {first: 'Tim', last:"Garcia", isCatOwner: true},
+    {first: 'att', last:"Lane"},
+    {first: 'Colt', last:"Steele", isCatOwner: true}
+  ],
+  'isCatOwner',
+  true
+)
