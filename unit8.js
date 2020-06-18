@@ -148,6 +148,16 @@ filterByValue(
 'isCatOwner'
 )
 
+function find(arr, num) {
+  for (i = 0; i < arr.length; i++){
+    if(arr[i] === num) {
+      return arr[i];
+    }
+  }
+  return -1;
+}
 
+find([1,2,3,4,2, 5], 2) // 3
+// find([1,2,3,4,5], 10)
 
 
