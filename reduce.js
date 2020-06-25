@@ -26,3 +26,23 @@ function vowelCount(str) {
         return acc;
     }, {});
 }
+
+
+
+function partition(arr, callBack) {
+ return arr.reduce((acc, item) => {
+   if(callBack(item)) {
+     acc[0].push(item)
+   } else {
+     acc[1].push(item)
+   }
+   return acc;
+ }, [[], []])
+}
+ 
+function isLongerThanThreeCharacters(val){
+ return val.length > 3;
+}
+const names = ['Elie', 'Colt', 'Tim', 'Matt'];
+ 
+partition(names, isLongerThanThreeCharacters)
