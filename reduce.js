@@ -9,3 +9,20 @@ const names =  arr.reduce((acc, val) => {
 
 const arrOfObj = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}]
 extractValue(arrOfObj)
+
+
+
+function vowelCount(str) {
+  let letters = str.replace(/\s/g, '').toLowerCase().split('')    
+
+  return letters.reduce((acc, vowel) => {
+  if('aeiou'.indexOf(vowel) !== -1) {
+  if(acc[vowel]){
+                acc[vowel]++;
+            } else {
+                acc[vowel] = 1;
+            }
+        }
+        return acc;
+    }, {});
+}
