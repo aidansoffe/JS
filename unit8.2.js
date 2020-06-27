@@ -46,3 +46,42 @@ function isLongerThanThreeCharacters(val){
 const names = ['Elie', 'Colt', 'Tim', 'Matt'];
  
 partition(names, isLongerThanThreeCharacters)
+
+
+function findUserByUsername(usersArray, username) {
+  return usersArray.find(function(value){
+   //  console.log(value.username)
+   return value.username === username
+ });
+}
+const users = [
+ {username: 'mlewis'},
+ {username: 'akagen'},
+ {username: 'msmith'}
+];
+ 
+// findUserByUsername(users, 'mlewis') // {username: 'mlewis'}
+findUserByUsername(users, 'taco') // undefined
+
+ 
+ 
+ 
+function removeUser(usersArray, username) {
+  let i = usersArray.findIndex(function(value){
+return value.username === username
+})
+   if(i === undefined){
+    return
+   }else{
+   return usersArray.splice(i,1)[0]
+}
+}
+const users = [
+ {username: 'mlewis'},
+ {username: 'akagen'},
+ {username: 'msmith'}
+];
+ 
+// removeUser(users, 'akagen') // {username: 'akagen'}
+removeUser(users, 'akagen') // undefined
+
