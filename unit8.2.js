@@ -1,5 +1,4 @@
 function extractValue(arr) {
-  // console.log(arr)
 const names =  arr.reduce((acc, val) => {
     acc.push(val.name)
   return acc;
@@ -50,7 +49,6 @@ partition(names, isLongerThanThreeCharacters)
 
 function findUserByUsername(usersArray, username) {
   return usersArray.find(function(value){
-   //  console.log(value.username)
    return value.username === username
  });
 }
@@ -60,7 +58,7 @@ const users = [
  {username: 'msmith'}
 ];
  
-// findUserByUsername(users, 'mlewis') // {username: 'mlewis'}
+findUserByUsername(users, 'mlewis') // {username: 'mlewis'}
 findUserByUsername(users, 'taco') // undefined
 
  
@@ -82,6 +80,6 @@ const users = [
  {username: 'msmith'}
 ];
  
-// removeUser(users, 'akagen') // {username: 'akagen'}
+removeUser(users, 'akagen') // {username: 'akagen'}
 removeUser(users, 'akagen') // undefined
 
