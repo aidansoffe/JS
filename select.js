@@ -8,6 +8,9 @@ function select(arr, obj) {
   return output;
 }
 
+
+
+
 var arr = ['a', 'c', 'e'];
 var obj = {
   a: 1,
@@ -16,4 +19,4 @@ var obj = {
   d: 4
 };
 var out = select(arr, obj);
-console.log(out);
+
