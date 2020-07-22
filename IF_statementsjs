@@ -12,3 +12,6 @@ console.log("The number is negative.")
   console.log("The number is zero.")
   //prints zero
 } 
+
+
+//
